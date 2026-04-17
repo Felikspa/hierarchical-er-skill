@@ -1,0 +1,28 @@
+{
+  "case_id": "gold-sample-001",
+  "description": "飞书发布会文本应产出稳定的实体和关系集合",
+  "run_fixture": "seed-run.json",
+  "expected": {
+    "mode": "fine",
+    "entity_canonical_names": [
+      "林岚",
+      "飞书",
+      "研发负责人",
+      "上海",
+      "上海发布会",
+      "Atlas",
+      "5 月",
+      "飞书数据团队",
+      "企业知识检索"
+    ],
+    "relation_tuples": [
+      ["affiliated_with", "林岚", "飞书"],
+      ["participates_in", "林岚", "上海发布会"],
+      ["located_in", "上海发布会", "上海"],
+      ["scheduled_at", "上海发布会", "5 月"],
+      ["member_of", "飞书数据团队", "飞书"],
+      ["owns", "飞书", "Atlas"],
+      ["uses", "Atlas", "企业知识检索"]
+    ]
+  }
+}

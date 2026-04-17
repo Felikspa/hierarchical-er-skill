@@ -1,0 +1,7 @@
+interface:
+  display_name: "Hierarchical ER Skill"
+  short_description: "Hierarchical ER extraction with review loop"
+  default_prompt: "Use $hierarchical-er-skill to extract entities and relations from plain text, keep evidence, update local graph memory, and refresh the review panel."
+
+policy:
+  allow_implicit_invocation: true

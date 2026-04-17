@@ -1,0 +1,267 @@
+{
+  "entities": [
+    {
+      "graph_entity_id": "g-entity-0001",
+      "canonical_name": "林岚",
+      "label": "person",
+      "aliases": [
+        "林岚"
+      ],
+      "source_entity_ids": [
+        "ef-1"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0002",
+      "canonical_name": "飞书",
+      "label": "organization",
+      "aliases": [
+        "Lark",
+        "飞书"
+      ],
+      "source_entity_ids": [
+        "ef-2"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0003",
+      "canonical_name": "研发负责人",
+      "label": "role",
+      "aliases": [
+        "研发负责人"
+      ],
+      "source_entity_ids": [
+        "ef-3"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0004",
+      "canonical_name": "上海",
+      "label": "location",
+      "aliases": [
+        "上海"
+      ],
+      "source_entity_ids": [
+        "ef-4"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0005",
+      "canonical_name": "上海发布会",
+      "label": "event",
+      "aliases": [
+        "发布会"
+      ],
+      "source_entity_ids": [
+        "ef-5"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0006",
+      "canonical_name": "Atlas",
+      "label": "product",
+      "aliases": [
+        "Atlas",
+        "飞书数据平台 Atlas"
+      ],
+      "source_entity_ids": [
+        "ef-6"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0007",
+      "canonical_name": "5 月",
+      "label": "time",
+      "aliases": [
+        "5 月"
+      ],
+      "source_entity_ids": [
+        "ef-7"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0008",
+      "canonical_name": "飞书数据团队",
+      "label": "department",
+      "aliases": [
+        "飞书数据团队"
+      ],
+      "source_entity_ids": [
+        "ef-8"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0009",
+      "canonical_name": "企业知识检索",
+      "label": "technology",
+      "aliases": [
+        "企业知识检索"
+      ],
+      "source_entity_ids": [
+        "ef-9"
+      ],
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    }
+  ],
+  "aliases": [
+    {
+      "alias": "林岚",
+      "graph_entity_id": "g-entity-0001"
+    },
+    {
+      "alias": "Lark",
+      "graph_entity_id": "g-entity-0002"
+    },
+    {
+      "alias": "飞书",
+      "graph_entity_id": "g-entity-0002"
+    },
+    {
+      "alias": "研发负责人",
+      "graph_entity_id": "g-entity-0003"
+    },
+    {
+      "alias": "上海",
+      "graph_entity_id": "g-entity-0004"
+    },
+    {
+      "alias": "上海发布会",
+      "graph_entity_id": "g-entity-0005"
+    },
+    {
+      "alias": "发布会",
+      "graph_entity_id": "g-entity-0005"
+    },
+    {
+      "alias": "Atlas",
+      "graph_entity_id": "g-entity-0006"
+    },
+    {
+      "alias": "飞书数据平台 Atlas",
+      "graph_entity_id": "g-entity-0006"
+    },
+    {
+      "alias": "5 月",
+      "graph_entity_id": "g-entity-0007"
+    },
+    {
+      "alias": "飞书数据团队",
+      "graph_entity_id": "g-entity-0008"
+    },
+    {
+      "alias": "企业知识检索",
+      "graph_entity_id": "g-entity-0009"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "g-relation-0001",
+      "type": "affiliated_with",
+      "head_graph_id": "g-entity-0001",
+      "tail_graph_id": "g-entity-0002",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0002",
+      "type": "participates_in",
+      "head_graph_id": "g-entity-0001",
+      "tail_graph_id": "g-entity-0005",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0003",
+      "type": "located_in",
+      "head_graph_id": "g-entity-0005",
+      "tail_graph_id": "g-entity-0004",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0004",
+      "type": "scheduled_at",
+      "head_graph_id": "g-entity-0005",
+      "tail_graph_id": "g-entity-0007",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0005",
+      "type": "member_of",
+      "head_graph_id": "g-entity-0008",
+      "tail_graph_id": "g-entity-0002",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0006",
+      "type": "owns",
+      "head_graph_id": "g-entity-0002",
+      "tail_graph_id": "g-entity-0006",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0007",
+      "type": "uses",
+      "head_graph_id": "g-entity-0006",
+      "tail_graph_id": "g-entity-0009",
+      "source_runs": [
+        "run-20260417-150000-demo"
+      ],
+      "last_seen_at": "2026-04-17T07:33:08+00:00"
+    }
+  ],
+  "source_runs": [
+    "run-20260417-150000-demo"
+  ],
+  "last_updated": "2026-04-17T07:33:08+00:00"
+}

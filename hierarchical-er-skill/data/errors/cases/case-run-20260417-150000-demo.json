@@ -1,0 +1,290 @@
+{
+  "case_id": "case-run-20260417-150000-demo",
+  "run_id": "run-20260417-150000-demo",
+  "captured_at": "2026-04-17T07:33:12+00:00",
+  "reasons": [
+    "constraint_conflict"
+  ],
+  "input_text": "飞书研发负责人林岚在上海发布会上表示，飞书数据平台 Atlas 将于 5 月上线。她提到 Atlas 由飞书数据团队维护，并服务于企业知识检索场景。",
+  "original_result": {
+    "mode": "fine",
+    "entities": [
+      {
+        "entity_id": "ef-1",
+        "label": "person",
+        "text": "林岚",
+        "canonical_name": "林岚",
+        "parent_id": "ec-1",
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 8,
+          "end": 10
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-1"
+        ]
+      },
+      {
+        "entity_id": "ef-2",
+        "label": "organization",
+        "text": "飞书",
+        "canonical_name": "飞书",
+        "parent_id": "ec-2",
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 0,
+          "end": 2
+        },
+        "aliases": [
+          "Lark"
+        ],
+        "evidence_ids": [
+          "ev-1",
+          "ev-2"
+        ]
+      },
+      {
+        "entity_id": "ef-3",
+        "label": "role",
+        "text": "研发负责人",
+        "canonical_name": "研发负责人",
+        "parent_id": null,
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 2,
+          "end": 7
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-1"
+        ]
+      },
+      {
+        "entity_id": "ef-4",
+        "label": "location",
+        "text": "上海",
+        "canonical_name": "上海",
+        "parent_id": "ec-3",
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 11,
+          "end": 13
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-1"
+        ]
+      },
+      {
+        "entity_id": "ef-5",
+        "label": "event",
+        "text": "发布会",
+        "canonical_name": "上海发布会",
+        "parent_id": "ec-5",
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 13,
+          "end": 16
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-1"
+        ]
+      },
+      {
+        "entity_id": "ef-6",
+        "label": "product",
+        "text": "Atlas",
+        "canonical_name": "Atlas",
+        "parent_id": "ec-4",
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 26,
+          "end": 31
+        },
+        "aliases": [
+          "飞书数据平台 Atlas"
+        ],
+        "evidence_ids": [
+          "ev-1",
+          "ev-2"
+        ]
+      },
+      {
+        "entity_id": "ef-7",
+        "label": "time",
+        "text": "5 月",
+        "canonical_name": "5 月",
+        "parent_id": null,
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 34,
+          "end": 37
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-1"
+        ]
+      },
+      {
+        "entity_id": "ef-8",
+        "label": "department",
+        "text": "飞书数据团队",
+        "canonical_name": "飞书数据团队",
+        "parent_id": null,
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 49,
+          "end": 55
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-2"
+        ]
+      },
+      {
+        "entity_id": "ef-9",
+        "label": "technology",
+        "text": "企业知识检索",
+        "canonical_name": "企业知识检索",
+        "parent_id": null,
+        "span": {
+          "chunk_id": "chunk-1",
+          "start": 63,
+          "end": 69
+        },
+        "aliases": [],
+        "evidence_ids": [
+          "ev-2"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "rf-1",
+        "type": "affiliated_with",
+        "head_id": "ef-1",
+        "tail_id": "ef-2",
+        "direction": "person->organization",
+        "evidence_ids": [
+          "ev-1"
+        ],
+        "sentence_distance": 0
+      },
+      {
+        "relation_id": "rf-2",
+        "type": "participates_in",
+        "head_id": "ef-1",
+        "tail_id": "ef-5",
+        "direction": "person->event",
+        "evidence_ids": [
+          "ev-1"
+        ],
+        "sentence_distance": 0
+      },
+      {
+        "relation_id": "rf-3",
+        "type": "located_in",
+        "head_id": "ef-5",
+        "tail_id": "ef-4",
+        "direction": "event->location",
+        "evidence_ids": [
+          "ev-1"
+        ],
+        "sentence_distance": 0
+      },
+      {
+        "relation_id": "rf-4",
+        "type": "scheduled_at",
+        "head_id": "ef-5",
+        "tail_id": "ef-7",
+        "direction": "event->time",
+        "evidence_ids": [
+          "ev-1"
+        ],
+        "sentence_distance": 0
+      },
+      {
+        "relation_id": "rf-5",
+        "type": "member_of",
+        "head_id": "ef-8",
+        "tail_id": "ef-2",
+        "direction": "department->organization",
+        "evidence_ids": [
+          "ev-2"
+        ],
+        "sentence_distance": 0
+      },
+      {
+        "relation_id": "rf-6",
+        "type": "owns",
+        "head_id": "ef-2",
+        "tail_id": "ef-6",
+        "direction": "organization->product",
+        "evidence_ids": [
+          "ev-1",
+          "ev-2"
+        ],
+        "sentence_distance": 1
+      },
+      {
+        "relation_id": "rf-7",
+        "type": "uses",
+        "head_id": "ef-6",
+        "tail_id": "ef-9",
+        "direction": "product->technology",
+        "evidence_ids": [
+          "ev-2"
+        ],
+        "sentence_distance": 0
+      }
+    ]
+  },
+  "issues": [
+    {
+      "issue_id": "issue-rc-3-invalid-pair",
+      "level": "error",
+      "code": "INVALID_RELATION_PAIR",
+      "message": "coarse: pair ['organization', 'product'] is not allowed for relation 'related_to'",
+      "target_ids": [
+        "rc-3"
+      ]
+    },
+    {
+      "issue_id": "issue-rc-3-direction",
+      "level": "error",
+      "code": "DIRECTION_MISMATCH",
+      "message": "coarse: direction organization->product conflicts with schema",
+      "target_ids": [
+        "rc-3"
+      ]
+    }
+  ],
+  "confidence_summary": {
+    "low": 0,
+    "medium": 13,
+    "high": 3
+  },
+  "reviewed_result": null,
+  "edit_summary": {
+    "substantive_edits": 0,
+    "edit_ratio": 0,
+    "changed_entities": [],
+    "changed_relations": [],
+    "total_items": 16
+  },
+  "few_shot_tags": [
+    "constraint-conflict",
+    "rel:affiliated_with",
+    "rel:located_in",
+    "rel:member_of",
+    "rel:owns",
+    "rel:participates_in",
+    "rel:scheduled_at",
+    "rel:uses"
+  ],
+  "prompt_optimization_points": [
+    "先根据 schema 验证 head/tail 实体类型，再输出关系方向与 relation type。"
+  ]
+}

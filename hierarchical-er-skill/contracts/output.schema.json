@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hierarchical ER Run Output",
+  "type": "object",
+  "required": [
+    "run_id",
+    "created_at",
+    "input_text",
+    "mode",
+    "language",
+    "schema_version",
+    "chunks",
+    "entities_coarse",
+    "entities_fine",
+    "relations_coarse",
+    "relations_fine",
+    "evidence",
+    "confidence",
+    "issues",
+    "graph_updates",
+    "error_capture",
+    "review_status"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "input_text": {"type": "string"},
+    "mode": {"enum": ["coarse", "standard", "fine"]},
+    "language": {"type": "string"},
+    "schema_version": {"type": "string"},
+    "chunks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["chunk_id", "text", "start", "end", "sentence_start", "sentence_end"],
+        "properties": {
+          "chunk_id": {"type": "string"},
+          "text": {"type": "string"},
+          "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 0},
+          "sentence_start": {"type": "integer", "minimum": 0},
+          "sentence_end": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "entities_coarse": {"$ref": "#/$defs/entities"},
+    "entities_fine": {"$ref": "#/$defs/entities"},
+    "relations_coarse": {"$ref": "#/$defs/relations"},
+    "relations_fine": {"$ref": "#/$defs/relations"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "chunk_id", "text", "start", "end", "sentence_index"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "chunk_id": {"type": "string"},
+          "text": {"type": "string"},
+          "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 0},
+          "sentence_index": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["thresholds", "entities", "relations", "summary"],
+      "properties": {
+        "thresholds": {
+          "type": "object",
+          "required": ["low", "medium"],
+          "properties": {
+            "low": {"type": "number", "minimum": 0, "maximum": 1},
+            "medium": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "entities": {"$ref": "#/$defs/confidenceItems"},
+        "relations": {"$ref": "#/$defs/confidenceItems"},
+        "summary": {
+          "type": "object",
+          "required": ["low", "medium", "high"],
+          "properties": {
+            "low": {"type": "integer", "minimum": 0},
+            "medium": {"type": "integer", "minimum": 0},
+            "high": {"type": "integer", "minimum": 0}
+          }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["issue_id", "level", "code", "message", "target_ids"],
+        "properties": {
+          "issue_id": {"type": "string"},
+          "level": {"enum": ["info", "warning", "error"]},
+          "code": {"type": "string"},
+          "message": {"type": "string"},
+          "target_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "graph_updates": {
+      "type": "object",
+      "required": ["matched_entities", "new_entities", "new_relations", "summary"],
+      "properties": {
+        "matched_entities": {"type": "array", "items": {"type": "object"}},
+        "new_entities": {"type": "array", "items": {"type": "object"}},
+        "new_relations": {"type": "array", "items": {"type": "object"}},
+        "summary": {"type": "object"}
+      }
+    },
+    "error_capture": {
+      "type": "object",
+      "required": ["should_capture", "reasons", "case_id", "suggestions"],
+      "properties": {
+        "should_capture": {"type": "boolean"},
+        "reasons": {"type": "array", "items": {"type": "string"}},
+        "case_id": {"type": ["string", "null"]},
+        "suggestions": {
+          "type": "object",
+          "required": ["few_shot_tags", "prompt_optimizations"],
+          "properties": {
+            "few_shot_tags": {"type": "array", "items": {"type": "string"}},
+            "prompt_optimizations": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "review_status": {
+      "type": "object",
+      "required": ["status", "substantive_edits", "edit_ratio", "revised_run_path", "last_reviewed_at"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "reviewed"]},
+        "substantive_edits": {"type": "integer", "minimum": 0},
+        "edit_ratio": {"type": "number", "minimum": 0},
+        "revised_run_path": {"type": ["string", "null"]},
+        "last_reviewed_at": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "$defs": {
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entity_id", "label", "text", "canonical_name", "span", "aliases", "evidence_ids"],
+        "properties": {
+          "entity_id": {"type": "string"},
+          "label": {"type": "string"},
+          "text": {"type": "string"},
+          "canonical_name": {"type": "string"},
+          "parent_id": {"type": ["string", "null"]},
+          "span": {
+            "type": "object",
+            "required": ["chunk_id", "start", "end"],
+            "properties": {
+              "chunk_id": {"type": "string"},
+              "start": {"type": "integer", "minimum": 0},
+              "end": {"type": "integer", "minimum": 0}
+            }
+          },
+          "aliases": {"type": "array", "items": {"type": "string"}},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation_id", "type", "head_id", "tail_id", "direction", "evidence_ids", "sentence_distance"],
+        "properties": {
+          "relation_id": {"type": "string"},
+          "type": {"type": "string"},
+          "head_id": {"type": "string"},
+          "tail_id": {"type": "string"},
+          "direction": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "sentence_distance": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "confidenceItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target_id", "kind", "model_score", "evidence_score", "rule_score", "conflict_penalty", "final", "band"],
+        "properties": {
+          "target_id": {"type": "string"},
+          "kind": {"enum": ["entity", "relation"]},
+          "model_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "rule_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "conflict_penalty": {"type": "number", "minimum": 0, "maximum": 1},
+          "final": {"type": "number", "minimum": 0, "maximum": 1},
+          "band": {"enum": ["low", "medium", "high"]}
+        }
+      }
+    }
+  }
+}
+

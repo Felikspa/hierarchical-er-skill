@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "modes": {
+    "coarse": {
+      "entities": ["person", "organization", "location", "product", "event"],
+      "relations": ["affiliated_with", "located_in", "participates_in", "related_to"]
+    },
+    "standard": {
+      "entities": ["person", "organization", "department", "role", "location", "product", "event", "policy", "technology"],
+      "relations": ["employed_by", "member_of", "located_in", "owns", "participates_in", "uses", "reports_to", "announced", "related_to"]
+    },
+    "fine": {
+      "entities": ["person", "organization", "department", "role", "location", "product", "event", "policy", "technology", "dataset", "metric", "time"],
+      "relations": ["employed_by", "member_of", "located_in", "owns", "participates_in", "uses", "reports_to", "announced", "measured_by", "scheduled_at", "alias_of", "related_to"]
+    }
+  },
+  "entity_aliases": {
+    "org": "organization",
+    "company": "organization",
+    "corp": "organization",
+    "team": "department",
+    "title": "role",
+    "place": "location"
+  },
+  "relation_aliases": {
+    "works_for": "employed_by",
+    "belongs_to": "member_of",
+    "happens_at": "scheduled_at",
+    "based_in": "located_in"
+  },
+  "allowed_relation_pairs": {
+    "affiliated_with": [["person", "organization"], ["organization", "organization"]],
+    "employed_by": [["person", "organization"]],
+    "member_of": [["person", "department"], ["department", "organization"]],
+    "located_in": [["organization", "location"], ["department", "location"], ["event", "location"]],
+    "owns": [["organization", "product"], ["organization", "dataset"]],
+    "participates_in": [["person", "event"], ["organization", "event"]],
+    "uses": [["organization", "technology"], ["department", "technology"], ["product", "technology"]],
+    "reports_to": [["role", "role"], ["department", "department"]],
+    "announced": [["organization", "policy"], ["organization", "event"], ["organization", "product"]],
+    "measured_by": [["event", "metric"], ["product", "metric"]],
+    "scheduled_at": [["event", "time"]],
+    "alias_of": [["person", "person"], ["organization", "organization"], ["product", "product"]],
+    "related_to": [["person", "organization"], ["person", "event"], ["organization", "event"], ["product", "technology"], ["policy", "event"]]
+  },
+  "direction_rules": {
+    "affiliated_with": {"head": ["person", "organization"], "tail": ["organization"]},
+    "employed_by": {"head": ["person"], "tail": ["organization"]},
+    "member_of": {"head": ["person", "department"], "tail": ["department", "organization"]},
+    "located_in": {"head": ["organization", "department", "event"], "tail": ["location"]},
+    "owns": {"head": ["organization"], "tail": ["product", "dataset"]},
+    "participates_in": {"head": ["person", "organization"], "tail": ["event"]},
+    "uses": {"head": ["organization", "department", "product"], "tail": ["technology"]},
+    "reports_to": {"head": ["role", "department"], "tail": ["role", "department"]},
+    "announced": {"head": ["organization"], "tail": ["policy", "event", "product"]},
+    "measured_by": {"head": ["event", "product"], "tail": ["metric"]},
+    "scheduled_at": {"head": ["event"], "tail": ["time"]},
+    "alias_of": {"head": ["person", "organization", "product"], "tail": ["person", "organization", "product"]},
+    "related_to": {"head": ["person", "organization", "product", "policy"], "tail": ["organization", "event", "technology"]}
+  },
+  "cross_sentence_windows": {
+    "affiliated_with": 1,
+    "employed_by": 1,
+    "member_of": 1,
+    "located_in": 1,
+    "owns": 1,
+    "participates_in": 2,
+    "uses": 1,
+    "reports_to": 1,
+    "announced": 1,
+    "measured_by": 1,
+    "scheduled_at": 2,
+    "alias_of": 0,
+    "related_to": 1
+  },
+  "confidence_thresholds": {
+    "low": 0.65,
+    "medium": 0.84
+  },
+  "review_thresholds": {
+    "substantive_edits": 2,
+    "edit_ratio": 0.3
+  }
+}
+

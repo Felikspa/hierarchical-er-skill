@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hierarchical ER Error Case",
+  "type": "object",
+  "required": [
+    "case_id",
+    "run_id",
+    "captured_at",
+    "reasons",
+    "input_text",
+    "original_result",
+    "issues",
+    "confidence_summary",
+    "reviewed_result",
+    "edit_summary",
+    "few_shot_tags",
+    "prompt_optimization_points"
+  ],
+  "properties": {
+    "case_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "captured_at": {"type": "string"},
+    "reasons": {"type": "array", "items": {"type": "string"}},
+    "input_text": {"type": "string"},
+    "original_result": {"type": "object"},
+    "issues": {"type": "array", "items": {"type": "object"}},
+    "confidence_summary": {"type": "object"},
+    "reviewed_result": {"type": ["object", "null"]},
+    "edit_summary": {"type": "object"},
+    "few_shot_tags": {"type": "array", "items": {"type": "string"}},
+    "prompt_optimization_points": {"type": "array", "items": {"type": "string"}}
+  }
+}
+

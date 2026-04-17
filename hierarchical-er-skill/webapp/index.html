@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchical ER Review Panel</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Hierarchical ER Skill</p>
+          <h1>实体关系抽取审阅面板</h1>
+          <p class="lede">
+            审阅抽取结果、检查证据与冲突、保存人工修订，并追踪图谱增量与错误样本沉淀。
+          </p>
+        </div>
+        <div class="topbar-actions">
+          <div class="status-chip" id="latestRunChip">Loading</div>
+          <button class="ghost-button" id="refreshButton" type="button">刷新数据</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="panel sidebar" id="historyPanel"></aside>
+
+        <section class="main-column">
+          <section class="panel hero-panel">
+            <div class="hero-metrics" id="summaryCards"></div>
+            <div class="mode-switch" id="modeSwitch"></div>
+            <div class="filter-row" id="filterRow"></div>
+          </section>
+
+          <section class="content-grid">
+            <section class="panel" id="sourcePanel"></section>
+            <section class="panel" id="entityPanel"></section>
+            <section class="panel" id="relationPanel"></section>
+            <section class="panel" id="graphPanel"></section>
+          </section>
+        </section>
+
+        <aside class="detail-column">
+          <section class="panel" id="confidencePanel"></section>
+          <section class="panel" id="issuePanel"></section>
+          <section class="panel" id="errorPanel"></section>
+          <section class="panel" id="reviewPanel"></section>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

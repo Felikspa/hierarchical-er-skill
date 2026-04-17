@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hierarchical ER Graph Memory",
+  "type": "object",
+  "required": ["entities", "aliases", "relations", "source_runs", "last_updated"],
+  "properties": {
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["graph_entity_id", "canonical_name", "label", "aliases", "source_entity_ids", "source_runs", "last_seen_at"],
+        "properties": {
+          "graph_entity_id": {"type": "string"},
+          "canonical_name": {"type": "string"},
+          "label": {"type": "string"},
+          "aliases": {"type": "array", "items": {"type": "string"}},
+          "source_entity_ids": {"type": "array", "items": {"type": "string"}},
+          "source_runs": {"type": "array", "items": {"type": "string"}},
+          "last_seen_at": {"type": "string"}
+        }
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["alias", "graph_entity_id"],
+        "properties": {
+          "alias": {"type": "string"},
+          "graph_entity_id": {"type": "string"}
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation_id", "type", "head_graph_id", "tail_graph_id", "source_runs", "last_seen_at"],
+        "properties": {
+          "relation_id": {"type": "string"},
+          "type": {"type": "string"},
+          "head_graph_id": {"type": "string"},
+          "tail_graph_id": {"type": "string"},
+          "source_runs": {"type": "array", "items": {"type": "string"}},
+          "last_seen_at": {"type": "string"}
+        }
+      }
+    },
+    "source_runs": {"type": "array", "items": {"type": "string"}},
+    "last_updated": {"type": "string"}
+  }
+}
+
