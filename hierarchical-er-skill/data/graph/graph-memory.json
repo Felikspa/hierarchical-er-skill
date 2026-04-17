@@ -136,6 +136,545 @@
         "run-20260417-150000-demo"
       ],
       "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0010",
+      "canonical_name": "Ashish Vaswani",
+      "label": "person",
+      "aliases": [
+        "Ashish Vaswani"
+      ],
+      "source_entity_ids": [
+        "ef-01"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0011",
+      "canonical_name": "Noam Shazeer",
+      "label": "person",
+      "aliases": [
+        "Noam Shazeer"
+      ],
+      "source_entity_ids": [
+        "ef-02"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0012",
+      "canonical_name": "Niki Parmar",
+      "label": "person",
+      "aliases": [
+        "Niki Parmar"
+      ],
+      "source_entity_ids": [
+        "ef-03"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0013",
+      "canonical_name": "Jakob Uszkoreit",
+      "label": "person",
+      "aliases": [
+        "Jakob Uszkoreit"
+      ],
+      "source_entity_ids": [
+        "ef-04"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0014",
+      "canonical_name": "Llion Jones",
+      "label": "person",
+      "aliases": [
+        "Llion Jones"
+      ],
+      "source_entity_ids": [
+        "ef-05"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0015",
+      "canonical_name": "Aidan N. Gomez",
+      "label": "person",
+      "aliases": [
+        "Aidan N. Gomez"
+      ],
+      "source_entity_ids": [
+        "ef-06"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0016",
+      "canonical_name": "Łukasz Kaiser",
+      "label": "person",
+      "aliases": [
+        "Łukasz Kaiser"
+      ],
+      "source_entity_ids": [
+        "ef-07"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0017",
+      "canonical_name": "Illia Polosukhin",
+      "label": "person",
+      "aliases": [
+        "Illia Polosukhin"
+      ],
+      "source_entity_ids": [
+        "ef-08"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0018",
+      "canonical_name": "Google Brain",
+      "label": "organization",
+      "aliases": [
+        "Google Brain"
+      ],
+      "source_entity_ids": [
+        "ef-09"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0019",
+      "canonical_name": "Google Research",
+      "label": "organization",
+      "aliases": [
+        "Google Research"
+      ],
+      "source_entity_ids": [
+        "ef-10"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0020",
+      "canonical_name": "University of Toronto",
+      "label": "organization",
+      "aliases": [
+        "University of Toronto"
+      ],
+      "source_entity_ids": [
+        "ef-11"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0021",
+      "canonical_name": "Transformer",
+      "label": "product",
+      "aliases": [
+        "Transformer",
+        "our model",
+        "the Transformer"
+      ],
+      "source_entity_ids": [
+        "ef-12"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0022",
+      "canonical_name": "Transformer (big)",
+      "label": "product",
+      "aliases": [
+        "Transformer (big)",
+        "big model",
+        "big transformer model"
+      ],
+      "source_entity_ids": [
+        "ef-13"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0023",
+      "canonical_name": "Extended Neural GPU",
+      "label": "product",
+      "aliases": [
+        "Extended Neural GPU"
+      ],
+      "source_entity_ids": [
+        "ef-14"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0024",
+      "canonical_name": "ByteNet",
+      "label": "product",
+      "aliases": [
+        "ByteNet"
+      ],
+      "source_entity_ids": [
+        "ef-15"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0025",
+      "canonical_name": "ConvS2S",
+      "label": "product",
+      "aliases": [
+        "ConvS2S"
+      ],
+      "source_entity_ids": [
+        "ef-16"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0026",
+      "canonical_name": "WMT 2014 English-to-German translation task",
+      "label": "event",
+      "aliases": [
+        "WMT 2014 English-to-German translation task"
+      ],
+      "source_entity_ids": [
+        "ef-17"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0027",
+      "canonical_name": "WMT 2014 English-to-French translation task",
+      "label": "event",
+      "aliases": [
+        "WMT 2014 English-to-French translation task"
+      ],
+      "source_entity_ids": [
+        "ef-18"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0028",
+      "canonical_name": "attention mechanism",
+      "label": "technology",
+      "aliases": [
+        "attention mechanism",
+        "attention mechanisms"
+      ],
+      "source_entity_ids": [
+        "ef-19"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0029",
+      "canonical_name": "self-attention",
+      "label": "technology",
+      "aliases": [
+        "Self-attention",
+        "intra-attention",
+        "multi-headed self-attention"
+      ],
+      "source_entity_ids": [
+        "ef-20"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0030",
+      "canonical_name": "Scaled Dot-Product Attention",
+      "label": "technology",
+      "aliases": [
+        "Scaled Dot-Product Attention"
+      ],
+      "source_entity_ids": [
+        "ef-21"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0031",
+      "canonical_name": "multi-head attention",
+      "label": "technology",
+      "aliases": [
+        "Multi-head attention",
+        "multi-head self-attention",
+        "multi-headed self-attention"
+      ],
+      "source_entity_ids": [
+        "ef-22"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0032",
+      "canonical_name": "position-wise feed-forward network",
+      "label": "technology",
+      "aliases": [
+        "feed-forward network",
+        "position-wise fully connected feed-forward network"
+      ],
+      "source_entity_ids": [
+        "ef-23"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0033",
+      "canonical_name": "residual connection",
+      "label": "technology",
+      "aliases": [
+        "residual connection"
+      ],
+      "source_entity_ids": [
+        "ef-24"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0034",
+      "canonical_name": "layer normalization",
+      "label": "technology",
+      "aliases": [
+        "layer normalization"
+      ],
+      "source_entity_ids": [
+        "ef-25"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0035",
+      "canonical_name": "positional encoding",
+      "label": "technology",
+      "aliases": [
+        "positional encoding",
+        "positional encodings"
+      ],
+      "source_entity_ids": [
+        "ef-26"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0036",
+      "canonical_name": "convolutional neural network",
+      "label": "technology",
+      "aliases": [
+        "convolutional neural network",
+        "convolutional neural networks"
+      ],
+      "source_entity_ids": [
+        "ef-27"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0037",
+      "canonical_name": "WMT 2014 English-German dataset",
+      "label": "dataset",
+      "aliases": [
+        "WMT 2014 English-German dataset"
+      ],
+      "source_entity_ids": [
+        "ef-28"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0038",
+      "canonical_name": "WMT 2014 English-French dataset",
+      "label": "dataset",
+      "aliases": [
+        "WMT 2014 English-French dataset"
+      ],
+      "source_entity_ids": [
+        "ef-29"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0039",
+      "canonical_name": "byte-pair encoding",
+      "label": "technology",
+      "aliases": [
+        "byte-pair encoding"
+      ],
+      "source_entity_ids": [
+        "ef-30"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0040",
+      "canonical_name": "Adam optimizer",
+      "label": "technology",
+      "aliases": [
+        "Adam optimizer"
+      ],
+      "source_entity_ids": [
+        "ef-31"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0041",
+      "canonical_name": "label smoothing",
+      "label": "technology",
+      "aliases": [
+        "label smoothing"
+      ],
+      "source_entity_ids": [
+        "ef-32"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0042",
+      "canonical_name": "28.4 BLEU",
+      "label": "metric",
+      "aliases": [
+        "28.4 BLEU",
+        "BLEU score of 28.4"
+      ],
+      "source_entity_ids": [
+        "ef-33"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0043",
+      "canonical_name": "41.0 BLEU",
+      "label": "metric",
+      "aliases": [
+        "41.0 BLEU",
+        "BLEU score of 41.0"
+      ],
+      "source_entity_ids": [
+        "ef-34"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "graph_entity_id": "g-entity-0044",
+      "canonical_name": "2014",
+      "label": "time",
+      "aliases": [
+        "2014"
+      ],
+      "source_entity_ids": [
+        "ef-35"
+      ],
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
     }
   ],
   "aliases": [
@@ -186,6 +725,214 @@
     {
       "alias": "企业知识检索",
       "graph_entity_id": "g-entity-0009"
+    },
+    {
+      "alias": "Ashish Vaswani",
+      "graph_entity_id": "g-entity-0010"
+    },
+    {
+      "alias": "Noam Shazeer",
+      "graph_entity_id": "g-entity-0011"
+    },
+    {
+      "alias": "Niki Parmar",
+      "graph_entity_id": "g-entity-0012"
+    },
+    {
+      "alias": "Jakob Uszkoreit",
+      "graph_entity_id": "g-entity-0013"
+    },
+    {
+      "alias": "Llion Jones",
+      "graph_entity_id": "g-entity-0014"
+    },
+    {
+      "alias": "Aidan N. Gomez",
+      "graph_entity_id": "g-entity-0015"
+    },
+    {
+      "alias": "Łukasz Kaiser",
+      "graph_entity_id": "g-entity-0016"
+    },
+    {
+      "alias": "Illia Polosukhin",
+      "graph_entity_id": "g-entity-0017"
+    },
+    {
+      "alias": "Google Brain",
+      "graph_entity_id": "g-entity-0018"
+    },
+    {
+      "alias": "Google Research",
+      "graph_entity_id": "g-entity-0019"
+    },
+    {
+      "alias": "University of Toronto",
+      "graph_entity_id": "g-entity-0020"
+    },
+    {
+      "alias": "Transformer",
+      "graph_entity_id": "g-entity-0021"
+    },
+    {
+      "alias": "our model",
+      "graph_entity_id": "g-entity-0021"
+    },
+    {
+      "alias": "the Transformer",
+      "graph_entity_id": "g-entity-0021"
+    },
+    {
+      "alias": "Transformer (big)",
+      "graph_entity_id": "g-entity-0022"
+    },
+    {
+      "alias": "big model",
+      "graph_entity_id": "g-entity-0022"
+    },
+    {
+      "alias": "big transformer model",
+      "graph_entity_id": "g-entity-0022"
+    },
+    {
+      "alias": "Extended Neural GPU",
+      "graph_entity_id": "g-entity-0023"
+    },
+    {
+      "alias": "ByteNet",
+      "graph_entity_id": "g-entity-0024"
+    },
+    {
+      "alias": "ConvS2S",
+      "graph_entity_id": "g-entity-0025"
+    },
+    {
+      "alias": "WMT 2014 English-to-German translation task",
+      "graph_entity_id": "g-entity-0026"
+    },
+    {
+      "alias": "WMT 2014 English-to-French translation task",
+      "graph_entity_id": "g-entity-0027"
+    },
+    {
+      "alias": "attention mechanism",
+      "graph_entity_id": "g-entity-0028"
+    },
+    {
+      "alias": "attention mechanisms",
+      "graph_entity_id": "g-entity-0028"
+    },
+    {
+      "alias": "Self-attention",
+      "graph_entity_id": "g-entity-0029"
+    },
+    {
+      "alias": "intra-attention",
+      "graph_entity_id": "g-entity-0029"
+    },
+    {
+      "alias": "multi-headed self-attention",
+      "graph_entity_id": "g-entity-0029"
+    },
+    {
+      "alias": "self-attention",
+      "graph_entity_id": "g-entity-0029"
+    },
+    {
+      "alias": "Scaled Dot-Product Attention",
+      "graph_entity_id": "g-entity-0030"
+    },
+    {
+      "alias": "Multi-head attention",
+      "graph_entity_id": "g-entity-0031"
+    },
+    {
+      "alias": "multi-head attention",
+      "graph_entity_id": "g-entity-0031"
+    },
+    {
+      "alias": "multi-head self-attention",
+      "graph_entity_id": "g-entity-0031"
+    },
+    {
+      "alias": "multi-headed self-attention",
+      "graph_entity_id": "g-entity-0031"
+    },
+    {
+      "alias": "feed-forward network",
+      "graph_entity_id": "g-entity-0032"
+    },
+    {
+      "alias": "position-wise feed-forward network",
+      "graph_entity_id": "g-entity-0032"
+    },
+    {
+      "alias": "position-wise fully connected feed-forward network",
+      "graph_entity_id": "g-entity-0032"
+    },
+    {
+      "alias": "residual connection",
+      "graph_entity_id": "g-entity-0033"
+    },
+    {
+      "alias": "layer normalization",
+      "graph_entity_id": "g-entity-0034"
+    },
+    {
+      "alias": "positional encoding",
+      "graph_entity_id": "g-entity-0035"
+    },
+    {
+      "alias": "positional encodings",
+      "graph_entity_id": "g-entity-0035"
+    },
+    {
+      "alias": "convolutional neural network",
+      "graph_entity_id": "g-entity-0036"
+    },
+    {
+      "alias": "convolutional neural networks",
+      "graph_entity_id": "g-entity-0036"
+    },
+    {
+      "alias": "WMT 2014 English-German dataset",
+      "graph_entity_id": "g-entity-0037"
+    },
+    {
+      "alias": "WMT 2014 English-French dataset",
+      "graph_entity_id": "g-entity-0038"
+    },
+    {
+      "alias": "byte-pair encoding",
+      "graph_entity_id": "g-entity-0039"
+    },
+    {
+      "alias": "Adam optimizer",
+      "graph_entity_id": "g-entity-0040"
+    },
+    {
+      "alias": "label smoothing",
+      "graph_entity_id": "g-entity-0041"
+    },
+    {
+      "alias": "28.4 BLEU",
+      "graph_entity_id": "g-entity-0042"
+    },
+    {
+      "alias": "BLEU score of 28.4",
+      "graph_entity_id": "g-entity-0042"
+    },
+    {
+      "alias": "41.0 BLEU",
+      "graph_entity_id": "g-entity-0043"
+    },
+    {
+      "alias": "BLEU score of 41.0",
+      "graph_entity_id": "g-entity-0043"
+    },
+    {
+      "alias": "2014",
+      "graph_entity_id": "g-entity-0044"
     }
   ],
   "relations": [
@@ -258,10 +1005,281 @@
         "run-20260417-150000-demo"
       ],
       "last_seen_at": "2026-04-17T07:33:08+00:00"
+    },
+    {
+      "relation_id": "g-relation-0008",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0010",
+      "tail_graph_id": "g-entity-0018",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0009",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0011",
+      "tail_graph_id": "g-entity-0018",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0010",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0012",
+      "tail_graph_id": "g-entity-0019",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0011",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0013",
+      "tail_graph_id": "g-entity-0019",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0012",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0014",
+      "tail_graph_id": "g-entity-0019",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0013",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0015",
+      "tail_graph_id": "g-entity-0020",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0014",
+      "type": "related_to",
+      "head_graph_id": "g-entity-0016",
+      "tail_graph_id": "g-entity-0018",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0015",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0028",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0016",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0029",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0017",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0030",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0018",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0031",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0019",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0032",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0020",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0033",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0021",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0034",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0022",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0035",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0023",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0039",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0024",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0040",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0025",
+      "type": "uses",
+      "head_graph_id": "g-entity-0021",
+      "tail_graph_id": "g-entity-0041",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0026",
+      "type": "uses",
+      "head_graph_id": "g-entity-0023",
+      "tail_graph_id": "g-entity-0036",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0027",
+      "type": "uses",
+      "head_graph_id": "g-entity-0024",
+      "tail_graph_id": "g-entity-0036",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0028",
+      "type": "uses",
+      "head_graph_id": "g-entity-0025",
+      "tail_graph_id": "g-entity-0036",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0029",
+      "type": "measured_by",
+      "head_graph_id": "g-entity-0026",
+      "tail_graph_id": "g-entity-0042",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0030",
+      "type": "scheduled_at",
+      "head_graph_id": "g-entity-0026",
+      "tail_graph_id": "g-entity-0044",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0031",
+      "type": "measured_by",
+      "head_graph_id": "g-entity-0027",
+      "tail_graph_id": "g-entity-0043",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0032",
+      "type": "scheduled_at",
+      "head_graph_id": "g-entity-0027",
+      "tail_graph_id": "g-entity-0044",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0033",
+      "type": "measured_by",
+      "head_graph_id": "g-entity-0022",
+      "tail_graph_id": "g-entity-0042",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
+    },
+    {
+      "relation_id": "g-relation-0034",
+      "type": "measured_by",
+      "head_graph_id": "g-entity-0022",
+      "tail_graph_id": "g-entity-0043",
+      "source_runs": [
+        "run-20260417-204500-attention-paper-fine"
+      ],
+      "last_seen_at": "2026-04-17T12:44:26+00:00"
     }
   ],
   "source_runs": [
-    "run-20260417-150000-demo"
+    "run-20260417-150000-demo",
+    "run-20260417-204500-attention-paper-fine"
   ],
-  "last_updated": "2026-04-17T07:33:08+00:00"
+  "last_updated": "2026-04-17T12:44:26+00:00"
 }

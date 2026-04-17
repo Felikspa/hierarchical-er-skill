@@ -1,0 +1,21 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Hierarchical ER Skill
+      - heading "实体关系抽取审阅面板" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 审阅抽取结果、检查证据与冲突、保存人工修订，并追踪图谱增量与错误样本沉淀。
+    - generic [ref=e8]:
+      - generic [ref=e9]: Loading
+      - button "切换到深色主题" [ref=e10] [cursor=pointer]:
+        - img [ref=e12]
+        - generic [ref=e14]: 切换深色
+      - button "刷新数据" [ref=e15] [cursor=pointer]
+  - main [ref=e16]:
+    - complementary [ref=e17]:
+      - button "历史运行" [expanded] [ref=e18] [cursor=pointer]:
+        - img [ref=e20]
+        - generic [ref=e22]: 历史运行
+    - complementary [ref=e33]:
+      - button "置信度与诊断" [expanded] [ref=e34] [cursor=pointer]:
+        - img [ref=e36]
+        - generic [ref=e38]: 置信度与诊断

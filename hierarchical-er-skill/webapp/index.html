@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="shell">
+    <div class="shell" id="shell">
       <header class="topbar">
-        <div>
+        <div class="topbar-copy">
           <p class="eyebrow">Hierarchical ER Skill</p>
           <h1>实体关系抽取审阅面板</h1>
           <p class="lede">
@@ -18,33 +18,51 @@
         </div>
         <div class="topbar-actions">
           <div class="status-chip" id="latestRunChip">Loading</div>
+          <button class="ghost-button theme-button" id="themeButton" type="button" aria-label="切换主题">
+            <span class="button-icon" aria-hidden="true"></span>
+            <span class="button-label">切换深色</span>
+          </button>
           <button class="ghost-button" id="refreshButton" type="button">刷新数据</button>
         </div>
       </header>
 
-      <main class="layout">
-        <aside class="panel sidebar" id="historyPanel"></aside>
+      <main class="workspace">
+        <aside class="dock dock-left" id="leftDock">
+          <button class="dock-toggle" id="leftDockToggle" type="button" aria-expanded="true">
+            <span class="dock-icon" aria-hidden="true"></span>
+            <span class="dock-toggle-label">历史运行</span>
+          </button>
+          <div class="dock-content panel" id="historyPanel"></div>
+        </aside>
 
         <section class="main-column">
           <section class="panel hero-panel">
             <div class="hero-metrics" id="summaryCards"></div>
-            <div class="mode-switch" id="modeSwitch"></div>
-            <div class="filter-row" id="filterRow"></div>
+            <div class="toolbar-row">
+              <div class="mode-switch" id="modeSwitch"></div>
+              <div class="filter-row" id="filterRow"></div>
+            </div>
           </section>
 
           <section class="content-grid">
-            <section class="panel" id="sourcePanel"></section>
-            <section class="panel" id="entityPanel"></section>
-            <section class="panel" id="relationPanel"></section>
-            <section class="panel" id="graphPanel"></section>
+            <section class="panel compact-panel" id="entityPanel"></section>
+            <section class="panel compact-panel" id="relationPanel"></section>
+            <section class="panel compact-panel" id="graphPanel"></section>
+            <section class="panel compact-panel" id="reviewPanel"></section>
+            <section class="panel source-panel" id="sourcePanel"></section>
           </section>
         </section>
 
-        <aside class="detail-column">
-          <section class="panel" id="confidencePanel"></section>
-          <section class="panel" id="issuePanel"></section>
-          <section class="panel" id="errorPanel"></section>
-          <section class="panel" id="reviewPanel"></section>
+        <aside class="dock dock-right" id="rightDock">
+          <button class="dock-toggle" id="rightDockToggle" type="button" aria-expanded="true">
+            <span class="dock-icon" aria-hidden="true"></span>
+            <span class="dock-toggle-label">置信度与诊断</span>
+          </button>
+          <div class="dock-stack">
+            <section class="panel" id="confidencePanel"></section>
+            <section class="panel" id="issuePanel"></section>
+            <section class="panel" id="errorPanel"></section>
+          </div>
         </aside>
       </main>
     </div>
@@ -52,4 +70,3 @@
     <script type="module" src="./app.js"></script>
   </body>
 </html>
-

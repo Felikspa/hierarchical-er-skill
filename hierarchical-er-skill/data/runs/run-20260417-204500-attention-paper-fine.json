@@ -1,0 +1,2725 @@
+{
+  "run_id": "run-20260417-204500-attention-paper-fine",
+  "created_at": "2026-04-17T20:45:00+08:00",
+  "input_text": "Ashish Vaswani\nGoogle Brain\n\nNoam Shazeer\nGoogle Brain\n\nNiki Parmar\nGoogle Research\n\nJakob Uszkoreit\nGoogle Research\n\nLlion Jones\nGoogle Research\n\nAidan N. Gomez\nUniversity of Toronto\n\nŁukasz Kaiser\nGoogle Brain\n\nIllia Polosukhin\n\nWe propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.\n\nOur model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs.\n\nThe goal of reducing sequential computation also forms the foundation of the Extended Neural GPU, ByteNet and ConvS2S, all of which use convolutional neural networks as basic building block.\n\nSelf-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence.\n\nEncoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network. We employ a residual connection around each of the two sub-layers, followed by layer normalization.\n\nWe call our particular attention Scaled Dot-Product Attention. The input consists of queries and keys of dimension dk, and values of dimension dv.\n\nMulti-head attention allows the model to jointly attend to information from different representation subspaces at different positions.\n\nSince our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add positional encodings to the input embeddings at the bottoms of the encoder and decoder stacks.\n\nWe trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million sentence pairs. Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT 2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece vocabulary.\n\nWe used the Adam optimizer with beta1 = 0.9, beta2 = 0.98 and epsilon = 10^-9.\n\nDuring training, we employed label smoothing of value epsilon_ls = 0.1. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.\n\nOn the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big)) outperforms the best previously reported models by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4. Training took 3.5 days on 8 P100 GPUs.\n\nOn the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than one quarter the training cost of the previous state-of-the-art model.\n\nIn this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.",
+  "mode": "fine",
+  "language": "en",
+  "schema_version": "1.0.0",
+  "chunks": [
+    {
+      "chunk_id": "chunk-01",
+      "text": "Ashish Vaswani\nGoogle Brain",
+      "start": 0,
+      "end": 27,
+      "sentence_start": 0,
+      "sentence_end": 0
+    },
+    {
+      "chunk_id": "chunk-02",
+      "text": "Noam Shazeer\nGoogle Brain",
+      "start": 29,
+      "end": 54,
+      "sentence_start": 1,
+      "sentence_end": 1
+    },
+    {
+      "chunk_id": "chunk-03",
+      "text": "Niki Parmar\nGoogle Research",
+      "start": 56,
+      "end": 83,
+      "sentence_start": 2,
+      "sentence_end": 2
+    },
+    {
+      "chunk_id": "chunk-04",
+      "text": "Jakob Uszkoreit\nGoogle Research",
+      "start": 85,
+      "end": 116,
+      "sentence_start": 3,
+      "sentence_end": 3
+    },
+    {
+      "chunk_id": "chunk-05",
+      "text": "Llion Jones\nGoogle Research",
+      "start": 118,
+      "end": 145,
+      "sentence_start": 4,
+      "sentence_end": 4
+    },
+    {
+      "chunk_id": "chunk-06",
+      "text": "Aidan N. Gomez\nUniversity of Toronto",
+      "start": 147,
+      "end": 183,
+      "sentence_start": 5,
+      "sentence_end": 5
+    },
+    {
+      "chunk_id": "chunk-07",
+      "text": "Łukasz Kaiser\nGoogle Brain",
+      "start": 185,
+      "end": 211,
+      "sentence_start": 6,
+      "sentence_end": 6
+    },
+    {
+      "chunk_id": "chunk-08",
+      "text": "Illia Polosukhin",
+      "start": 213,
+      "end": 229,
+      "sentence_start": 7,
+      "sentence_end": 7
+    },
+    {
+      "chunk_id": "chunk-09",
+      "text": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+      "start": 231,
+      "end": 385,
+      "sentence_start": 8,
+      "sentence_end": 8
+    },
+    {
+      "chunk_id": "chunk-10",
+      "text": "Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs.",
+      "start": 387,
+      "end": 718,
+      "sentence_start": 9,
+      "sentence_end": 9
+    },
+    {
+      "chunk_id": "chunk-11",
+      "text": "The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU, ByteNet and ConvS2S, all of which use convolutional neural networks as basic building block.",
+      "start": 720,
+      "end": 910,
+      "sentence_start": 10,
+      "sentence_end": 10
+    },
+    {
+      "chunk_id": "chunk-12",
+      "text": "Self-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence.",
+      "start": 912,
+      "end": 1091,
+      "sentence_start": 11,
+      "sentence_end": 11
+    },
+    {
+      "chunk_id": "chunk-13",
+      "text": "Encoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network. We employ a residual connection around each of the two sub-layers, followed by layer normalization.",
+      "start": 1093,
+      "end": 1426,
+      "sentence_start": 12,
+      "sentence_end": 12
+    },
+    {
+      "chunk_id": "chunk-14",
+      "text": "We call our particular attention Scaled Dot-Product Attention. The input consists of queries and keys of dimension dk, and values of dimension dv.",
+      "start": 1428,
+      "end": 1574,
+      "sentence_start": 13,
+      "sentence_end": 13
+    },
+    {
+      "chunk_id": "chunk-15",
+      "text": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions.",
+      "start": 1576,
+      "end": 1710,
+      "sentence_start": 14,
+      "sentence_end": 14
+    },
+    {
+      "chunk_id": "chunk-16",
+      "text": "Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add positional encodings to the input embeddings at the bottoms of the encoder and decoder stacks.",
+      "start": 1712,
+      "end": 2053,
+      "sentence_start": 15,
+      "sentence_end": 15
+    },
+    {
+      "chunk_id": "chunk-17",
+      "text": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million sentence pairs. Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT 2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece vocabulary.",
+      "start": 2055,
+      "end": 2443,
+      "sentence_start": 16,
+      "sentence_end": 16
+    },
+    {
+      "chunk_id": "chunk-18",
+      "text": "We used the Adam optimizer with beta1 = 0.9, beta2 = 0.98 and epsilon = 10^-9.",
+      "start": 2445,
+      "end": 2523,
+      "sentence_start": 17,
+      "sentence_end": 17
+    },
+    {
+      "chunk_id": "chunk-19",
+      "text": "During training, we employed label smoothing of value epsilon_ls = 0.1. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+      "start": 2525,
+      "end": 2696,
+      "sentence_start": 18,
+      "sentence_end": 18
+    },
+    {
+      "chunk_id": "chunk-20",
+      "text": "On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big)) outperforms the best previously reported models by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4. Training took 3.5 days on 8 P100 GPUs.",
+      "start": 2698,
+      "end": 2961,
+      "sentence_start": 19,
+      "sentence_end": 19
+    },
+    {
+      "chunk_id": "chunk-21",
+      "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than one quarter the training cost of the previous state-of-the-art model.",
+      "start": 2963,
+      "end": 3203,
+      "sentence_start": 20,
+      "sentence_end": 20
+    },
+    {
+      "chunk_id": "chunk-22",
+      "text": "In this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.",
+      "start": 3205,
+      "end": 3432,
+      "sentence_start": 21,
+      "sentence_end": 21
+    }
+  ],
+  "entities_coarse": [
+    {
+      "entity_id": "ec-01",
+      "label": "person",
+      "text": "Ashish Vaswani",
+      "canonical_name": "Ashish Vaswani",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-01",
+        "start": 0,
+        "end": 14
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-01"
+      ]
+    },
+    {
+      "entity_id": "ec-02",
+      "label": "person",
+      "text": "Noam Shazeer",
+      "canonical_name": "Noam Shazeer",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-02",
+        "start": 0,
+        "end": 12
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-02"
+      ]
+    },
+    {
+      "entity_id": "ec-03",
+      "label": "person",
+      "text": "Niki Parmar",
+      "canonical_name": "Niki Parmar",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-03",
+        "start": 0,
+        "end": 11
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-03"
+      ]
+    },
+    {
+      "entity_id": "ec-04",
+      "label": "person",
+      "text": "Jakob Uszkoreit",
+      "canonical_name": "Jakob Uszkoreit",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-04",
+        "start": 0,
+        "end": 15
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-04"
+      ]
+    },
+    {
+      "entity_id": "ec-05",
+      "label": "person",
+      "text": "Llion Jones",
+      "canonical_name": "Llion Jones",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-05",
+        "start": 0,
+        "end": 11
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-05"
+      ]
+    },
+    {
+      "entity_id": "ec-06",
+      "label": "person",
+      "text": "Aidan N. Gomez",
+      "canonical_name": "Aidan N. Gomez",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-06",
+        "start": 0,
+        "end": 14
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-06"
+      ]
+    },
+    {
+      "entity_id": "ec-07",
+      "label": "person",
+      "text": "Łukasz Kaiser",
+      "canonical_name": "Łukasz Kaiser",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-07",
+        "start": 0,
+        "end": 13
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-07"
+      ]
+    },
+    {
+      "entity_id": "ec-08",
+      "label": "person",
+      "text": "Illia Polosukhin",
+      "canonical_name": "Illia Polosukhin",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-08",
+        "start": 0,
+        "end": 16
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-08"
+      ]
+    },
+    {
+      "entity_id": "ec-09",
+      "label": "organization",
+      "text": "Google Brain",
+      "canonical_name": "Google Brain",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-01",
+        "start": 15,
+        "end": 27
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-01",
+        "ev-02",
+        "ev-07"
+      ]
+    },
+    {
+      "entity_id": "ec-10",
+      "label": "organization",
+      "text": "Google Research",
+      "canonical_name": "Google Research",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-03",
+        "start": 12,
+        "end": 27
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-03",
+        "ev-04",
+        "ev-05"
+      ]
+    },
+    {
+      "entity_id": "ec-11",
+      "label": "organization",
+      "text": "University of Toronto",
+      "canonical_name": "University of Toronto",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-06",
+        "start": 15,
+        "end": 36
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-06"
+      ]
+    },
+    {
+      "entity_id": "ec-12",
+      "label": "product",
+      "text": "Transformer",
+      "canonical_name": "Transformer",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-09",
+        "start": 50,
+        "end": 61
+      },
+      "aliases": [
+        "the Transformer",
+        "our model"
+      ],
+      "evidence_ids": [
+        "ev-09",
+        "ev-22"
+      ]
+    },
+    {
+      "entity_id": "ec-13",
+      "label": "product",
+      "text": "Transformer (big)",
+      "canonical_name": "Transformer (big)",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 79,
+        "end": 96
+      },
+      "aliases": [
+        "big transformer model",
+        "big model"
+      ],
+      "evidence_ids": [
+        "ev-20",
+        "ev-21"
+      ]
+    },
+    {
+      "entity_id": "ec-14",
+      "label": "product",
+      "text": "Extended Neural GPU",
+      "canonical_name": "Extended Neural GPU",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 77,
+        "end": 96
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ec-15",
+      "label": "product",
+      "text": "ByteNet",
+      "canonical_name": "ByteNet",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 98,
+        "end": 105
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ec-16",
+      "label": "product",
+      "text": "ConvS2S",
+      "canonical_name": "ConvS2S",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 110,
+        "end": 117
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ec-17",
+      "label": "event",
+      "text": "WMT 2014 English-to-German translation task",
+      "canonical_name": "WMT 2014 English-to-German translation task",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 7,
+        "end": 50
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-20"
+      ]
+    },
+    {
+      "entity_id": "ec-18",
+      "label": "event",
+      "text": "WMT 2014 English-to-French translation task",
+      "canonical_name": "WMT 2014 English-to-French translation task",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-21",
+        "start": 7,
+        "end": 50
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-21"
+      ]
+    }
+  ],
+  "entities_fine": [
+    {
+      "entity_id": "ef-01",
+      "label": "person",
+      "text": "Ashish Vaswani",
+      "canonical_name": "Ashish Vaswani",
+      "parent_id": "ec-01",
+      "span": {
+        "chunk_id": "chunk-01",
+        "start": 0,
+        "end": 14
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-01"
+      ]
+    },
+    {
+      "entity_id": "ef-02",
+      "label": "person",
+      "text": "Noam Shazeer",
+      "canonical_name": "Noam Shazeer",
+      "parent_id": "ec-02",
+      "span": {
+        "chunk_id": "chunk-02",
+        "start": 0,
+        "end": 12
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-02"
+      ]
+    },
+    {
+      "entity_id": "ef-03",
+      "label": "person",
+      "text": "Niki Parmar",
+      "canonical_name": "Niki Parmar",
+      "parent_id": "ec-03",
+      "span": {
+        "chunk_id": "chunk-03",
+        "start": 0,
+        "end": 11
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-03"
+      ]
+    },
+    {
+      "entity_id": "ef-04",
+      "label": "person",
+      "text": "Jakob Uszkoreit",
+      "canonical_name": "Jakob Uszkoreit",
+      "parent_id": "ec-04",
+      "span": {
+        "chunk_id": "chunk-04",
+        "start": 0,
+        "end": 15
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-04"
+      ]
+    },
+    {
+      "entity_id": "ef-05",
+      "label": "person",
+      "text": "Llion Jones",
+      "canonical_name": "Llion Jones",
+      "parent_id": "ec-05",
+      "span": {
+        "chunk_id": "chunk-05",
+        "start": 0,
+        "end": 11
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-05"
+      ]
+    },
+    {
+      "entity_id": "ef-06",
+      "label": "person",
+      "text": "Aidan N. Gomez",
+      "canonical_name": "Aidan N. Gomez",
+      "parent_id": "ec-06",
+      "span": {
+        "chunk_id": "chunk-06",
+        "start": 0,
+        "end": 14
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-06"
+      ]
+    },
+    {
+      "entity_id": "ef-07",
+      "label": "person",
+      "text": "Łukasz Kaiser",
+      "canonical_name": "Łukasz Kaiser",
+      "parent_id": "ec-07",
+      "span": {
+        "chunk_id": "chunk-07",
+        "start": 0,
+        "end": 13
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-07"
+      ]
+    },
+    {
+      "entity_id": "ef-08",
+      "label": "person",
+      "text": "Illia Polosukhin",
+      "canonical_name": "Illia Polosukhin",
+      "parent_id": "ec-08",
+      "span": {
+        "chunk_id": "chunk-08",
+        "start": 0,
+        "end": 16
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-08"
+      ]
+    },
+    {
+      "entity_id": "ef-09",
+      "label": "organization",
+      "text": "Google Brain",
+      "canonical_name": "Google Brain",
+      "parent_id": "ec-09",
+      "span": {
+        "chunk_id": "chunk-01",
+        "start": 15,
+        "end": 27
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-01",
+        "ev-02",
+        "ev-07"
+      ]
+    },
+    {
+      "entity_id": "ef-10",
+      "label": "organization",
+      "text": "Google Research",
+      "canonical_name": "Google Research",
+      "parent_id": "ec-10",
+      "span": {
+        "chunk_id": "chunk-03",
+        "start": 12,
+        "end": 27
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-03",
+        "ev-04",
+        "ev-05"
+      ]
+    },
+    {
+      "entity_id": "ef-11",
+      "label": "organization",
+      "text": "University of Toronto",
+      "canonical_name": "University of Toronto",
+      "parent_id": "ec-11",
+      "span": {
+        "chunk_id": "chunk-06",
+        "start": 15,
+        "end": 36
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-06"
+      ]
+    },
+    {
+      "entity_id": "ef-12",
+      "label": "product",
+      "text": "Transformer",
+      "canonical_name": "Transformer",
+      "parent_id": "ec-12",
+      "span": {
+        "chunk_id": "chunk-09",
+        "start": 50,
+        "end": 61
+      },
+      "aliases": [
+        "the Transformer",
+        "our model"
+      ],
+      "evidence_ids": [
+        "ev-09",
+        "ev-22"
+      ]
+    },
+    {
+      "entity_id": "ef-13",
+      "label": "product",
+      "text": "Transformer (big)",
+      "canonical_name": "Transformer (big)",
+      "parent_id": "ec-13",
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 79,
+        "end": 96
+      },
+      "aliases": [
+        "big transformer model",
+        "big model"
+      ],
+      "evidence_ids": [
+        "ev-20",
+        "ev-21"
+      ]
+    },
+    {
+      "entity_id": "ef-14",
+      "label": "product",
+      "text": "Extended Neural GPU",
+      "canonical_name": "Extended Neural GPU",
+      "parent_id": "ec-14",
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 77,
+        "end": 96
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ef-15",
+      "label": "product",
+      "text": "ByteNet",
+      "canonical_name": "ByteNet",
+      "parent_id": "ec-15",
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 98,
+        "end": 105
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ef-16",
+      "label": "product",
+      "text": "ConvS2S",
+      "canonical_name": "ConvS2S",
+      "parent_id": "ec-16",
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 110,
+        "end": 117
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ef-17",
+      "label": "event",
+      "text": "WMT 2014 English-to-German translation task",
+      "canonical_name": "WMT 2014 English-to-German translation task",
+      "parent_id": "ec-17",
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 7,
+        "end": 50
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-20"
+      ]
+    },
+    {
+      "entity_id": "ef-18",
+      "label": "event",
+      "text": "WMT 2014 English-to-French translation task",
+      "canonical_name": "WMT 2014 English-to-French translation task",
+      "parent_id": "ec-18",
+      "span": {
+        "chunk_id": "chunk-21",
+        "start": 7,
+        "end": 50
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-21"
+      ]
+    },
+    {
+      "entity_id": "ef-19",
+      "label": "technology",
+      "text": "attention mechanisms",
+      "canonical_name": "attention mechanism",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-09",
+        "start": 79,
+        "end": 99
+      },
+      "aliases": [
+        "attention mechanism"
+      ],
+      "evidence_ids": [
+        "ev-09",
+        "ev-12"
+      ]
+    },
+    {
+      "entity_id": "ef-20",
+      "label": "technology",
+      "text": "Self-attention",
+      "canonical_name": "self-attention",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-12",
+        "start": 0,
+        "end": 14
+      },
+      "aliases": [
+        "intra-attention",
+        "multi-headed self-attention"
+      ],
+      "evidence_ids": [
+        "ev-12",
+        "ev-13",
+        "ev-22"
+      ]
+    },
+    {
+      "entity_id": "ef-21",
+      "label": "technology",
+      "text": "Scaled Dot-Product Attention",
+      "canonical_name": "Scaled Dot-Product Attention",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-14",
+        "start": 33,
+        "end": 61
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-14"
+      ]
+    },
+    {
+      "entity_id": "ef-22",
+      "label": "technology",
+      "text": "multi-head self-attention",
+      "canonical_name": "multi-head attention",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-13",
+        "start": 117,
+        "end": 142
+      },
+      "aliases": [
+        "Multi-head attention",
+        "multi-headed self-attention"
+      ],
+      "evidence_ids": [
+        "ev-13",
+        "ev-15",
+        "ev-22"
+      ]
+    },
+    {
+      "entity_id": "ef-23",
+      "label": "technology",
+      "text": "position-wise fully connected feed-forward network",
+      "canonical_name": "position-wise feed-forward network",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-13",
+        "start": 182,
+        "end": 232
+      },
+      "aliases": [
+        "feed-forward network"
+      ],
+      "evidence_ids": [
+        "ev-13"
+      ]
+    },
+    {
+      "entity_id": "ef-24",
+      "label": "technology",
+      "text": "residual connection",
+      "canonical_name": "residual connection",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-13",
+        "start": 246,
+        "end": 265
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-13"
+      ]
+    },
+    {
+      "entity_id": "ef-25",
+      "label": "technology",
+      "text": "layer normalization",
+      "canonical_name": "layer normalization",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-13",
+        "start": 313,
+        "end": 332
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-13"
+      ]
+    },
+    {
+      "entity_id": "ef-26",
+      "label": "technology",
+      "text": "positional encodings",
+      "canonical_name": "positional encoding",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-16",
+        "start": 247,
+        "end": 267
+      },
+      "aliases": [
+        "positional encoding"
+      ],
+      "evidence_ids": [
+        "ev-16"
+      ]
+    },
+    {
+      "entity_id": "ef-27",
+      "label": "technology",
+      "text": "convolutional neural networks",
+      "canonical_name": "convolutional neural network",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-11",
+        "start": 136,
+        "end": 165
+      },
+      "aliases": [
+        "convolutional neural network"
+      ],
+      "evidence_ids": [
+        "ev-11"
+      ]
+    },
+    {
+      "entity_id": "ef-28",
+      "label": "dataset",
+      "text": "WMT 2014 English-German dataset",
+      "canonical_name": "WMT 2014 English-German dataset",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-17",
+        "start": 27,
+        "end": 58
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-17"
+      ]
+    },
+    {
+      "entity_id": "ef-29",
+      "label": "dataset",
+      "text": "WMT 2014 English-French dataset",
+      "canonical_name": "WMT 2014 English-French dataset",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-17",
+        "start": 276,
+        "end": 307
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-17"
+      ]
+    },
+    {
+      "entity_id": "ef-30",
+      "label": "technology",
+      "text": "byte-pair encoding",
+      "canonical_name": "byte-pair encoding",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-17",
+        "start": 136,
+        "end": 154
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-17"
+      ]
+    },
+    {
+      "entity_id": "ef-31",
+      "label": "technology",
+      "text": "Adam optimizer",
+      "canonical_name": "Adam optimizer",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-18",
+        "start": 12,
+        "end": 26
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-18"
+      ]
+    },
+    {
+      "entity_id": "ef-32",
+      "label": "technology",
+      "text": "label smoothing",
+      "canonical_name": "label smoothing",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-19",
+        "start": 29,
+        "end": 44
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-19"
+      ]
+    },
+    {
+      "entity_id": "ef-33",
+      "label": "metric",
+      "text": "28.4 BLEU",
+      "canonical_name": "28.4 BLEU",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 219,
+        "end": 223
+      },
+      "aliases": [
+        "BLEU score of 28.4"
+      ],
+      "evidence_ids": [
+        "ev-20"
+      ]
+    },
+    {
+      "entity_id": "ef-34",
+      "label": "metric",
+      "text": "41.0 BLEU",
+      "canonical_name": "41.0 BLEU",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-21",
+        "start": 91,
+        "end": 95
+      },
+      "aliases": [
+        "BLEU score of 41.0"
+      ],
+      "evidence_ids": [
+        "ev-21"
+      ]
+    },
+    {
+      "entity_id": "ef-35",
+      "label": "time",
+      "text": "2014",
+      "canonical_name": "2014",
+      "parent_id": null,
+      "span": {
+        "chunk_id": "chunk-20",
+        "start": 11,
+        "end": 15
+      },
+      "aliases": [],
+      "evidence_ids": [
+        "ev-20",
+        "ev-21"
+      ]
+    }
+  ],
+  "relations_coarse": [
+    {
+      "relation_id": "rc-01",
+      "type": "affiliated_with",
+      "head_id": "ec-01",
+      "tail_id": "ec-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-01"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-02",
+      "type": "affiliated_with",
+      "head_id": "ec-02",
+      "tail_id": "ec-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-02"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-03",
+      "type": "affiliated_with",
+      "head_id": "ec-03",
+      "tail_id": "ec-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-03"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-04",
+      "type": "affiliated_with",
+      "head_id": "ec-04",
+      "tail_id": "ec-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-04"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-05",
+      "type": "affiliated_with",
+      "head_id": "ec-05",
+      "tail_id": "ec-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-05"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-06",
+      "type": "affiliated_with",
+      "head_id": "ec-06",
+      "tail_id": "ec-11",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-06"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rc-07",
+      "type": "affiliated_with",
+      "head_id": "ec-07",
+      "tail_id": "ec-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-07"
+      ],
+      "sentence_distance": 0
+    }
+  ],
+  "relations_fine": [
+    {
+      "relation_id": "rf-01",
+      "type": "related_to",
+      "head_id": "ef-01",
+      "tail_id": "ef-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-01"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-02",
+      "type": "related_to",
+      "head_id": "ef-02",
+      "tail_id": "ef-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-02"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-03",
+      "type": "related_to",
+      "head_id": "ef-03",
+      "tail_id": "ef-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-03"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-04",
+      "type": "related_to",
+      "head_id": "ef-04",
+      "tail_id": "ef-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-04"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-05",
+      "type": "related_to",
+      "head_id": "ef-05",
+      "tail_id": "ef-10",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-05"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-06",
+      "type": "related_to",
+      "head_id": "ef-06",
+      "tail_id": "ef-11",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-06"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-07",
+      "type": "related_to",
+      "head_id": "ef-07",
+      "tail_id": "ef-09",
+      "direction": "person->organization",
+      "evidence_ids": [
+        "ev-07"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-08",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-19",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-09",
+        "ev-22"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-09",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-20",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-13",
+        "ev-22"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-10",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-21",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-14"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-11",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-22",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-13",
+        "ev-15",
+        "ev-22"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-12",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-23",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-13"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-13",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-24",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-13"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-14",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-25",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-13"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-15",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-26",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-16"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-16",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-30",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-17"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-17",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-31",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-18"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-18",
+      "type": "uses",
+      "head_id": "ef-12",
+      "tail_id": "ef-32",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-19"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-19",
+      "type": "uses",
+      "head_id": "ef-14",
+      "tail_id": "ef-27",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-11"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-20",
+      "type": "uses",
+      "head_id": "ef-15",
+      "tail_id": "ef-27",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-11"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-21",
+      "type": "uses",
+      "head_id": "ef-16",
+      "tail_id": "ef-27",
+      "direction": "product->technology",
+      "evidence_ids": [
+        "ev-11"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-22",
+      "type": "measured_by",
+      "head_id": "ef-17",
+      "tail_id": "ef-33",
+      "direction": "event->metric",
+      "evidence_ids": [
+        "ev-20"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-23",
+      "type": "scheduled_at",
+      "head_id": "ef-17",
+      "tail_id": "ef-35",
+      "direction": "event->time",
+      "evidence_ids": [
+        "ev-20"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-24",
+      "type": "measured_by",
+      "head_id": "ef-18",
+      "tail_id": "ef-34",
+      "direction": "event->metric",
+      "evidence_ids": [
+        "ev-21"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-25",
+      "type": "scheduled_at",
+      "head_id": "ef-18",
+      "tail_id": "ef-35",
+      "direction": "event->time",
+      "evidence_ids": [
+        "ev-21"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-26",
+      "type": "measured_by",
+      "head_id": "ef-13",
+      "tail_id": "ef-33",
+      "direction": "product->metric",
+      "evidence_ids": [
+        "ev-20"
+      ],
+      "sentence_distance": 0
+    },
+    {
+      "relation_id": "rf-27",
+      "type": "measured_by",
+      "head_id": "ef-13",
+      "tail_id": "ef-34",
+      "direction": "product->metric",
+      "evidence_ids": [
+        "ev-21"
+      ],
+      "sentence_distance": 0
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev-01",
+      "chunk_id": "chunk-01",
+      "text": "Ashish Vaswani\nGoogle Brain",
+      "start": 0,
+      "end": 27,
+      "sentence_index": 0
+    },
+    {
+      "evidence_id": "ev-02",
+      "chunk_id": "chunk-02",
+      "text": "Noam Shazeer\nGoogle Brain",
+      "start": 29,
+      "end": 54,
+      "sentence_index": 1
+    },
+    {
+      "evidence_id": "ev-03",
+      "chunk_id": "chunk-03",
+      "text": "Niki Parmar\nGoogle Research",
+      "start": 56,
+      "end": 83,
+      "sentence_index": 2
+    },
+    {
+      "evidence_id": "ev-04",
+      "chunk_id": "chunk-04",
+      "text": "Jakob Uszkoreit\nGoogle Research",
+      "start": 85,
+      "end": 116,
+      "sentence_index": 3
+    },
+    {
+      "evidence_id": "ev-05",
+      "chunk_id": "chunk-05",
+      "text": "Llion Jones\nGoogle Research",
+      "start": 118,
+      "end": 145,
+      "sentence_index": 4
+    },
+    {
+      "evidence_id": "ev-06",
+      "chunk_id": "chunk-06",
+      "text": "Aidan N. Gomez\nUniversity of Toronto",
+      "start": 147,
+      "end": 183,
+      "sentence_index": 5
+    },
+    {
+      "evidence_id": "ev-07",
+      "chunk_id": "chunk-07",
+      "text": "Łukasz Kaiser\nGoogle Brain",
+      "start": 185,
+      "end": 211,
+      "sentence_index": 6
+    },
+    {
+      "evidence_id": "ev-08",
+      "chunk_id": "chunk-08",
+      "text": "Illia Polosukhin",
+      "start": 213,
+      "end": 229,
+      "sentence_index": 7
+    },
+    {
+      "evidence_id": "ev-09",
+      "chunk_id": "chunk-09",
+      "text": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+      "start": 231,
+      "end": 385,
+      "sentence_index": 8
+    },
+    {
+      "evidence_id": "ev-10",
+      "chunk_id": "chunk-10",
+      "text": "Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs.",
+      "start": 387,
+      "end": 718,
+      "sentence_index": 9
+    },
+    {
+      "evidence_id": "ev-11",
+      "chunk_id": "chunk-11",
+      "text": "The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU, ByteNet and ConvS2S, all of which use convolutional neural networks as basic building block.",
+      "start": 720,
+      "end": 910,
+      "sentence_index": 10
+    },
+    {
+      "evidence_id": "ev-12",
+      "chunk_id": "chunk-12",
+      "text": "Self-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence.",
+      "start": 912,
+      "end": 1091,
+      "sentence_index": 11
+    },
+    {
+      "evidence_id": "ev-13",
+      "chunk_id": "chunk-13",
+      "text": "Encoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network. We employ a residual connection around each of the two sub-layers, followed by layer normalization.",
+      "start": 1093,
+      "end": 1426,
+      "sentence_index": 12
+    },
+    {
+      "evidence_id": "ev-14",
+      "chunk_id": "chunk-14",
+      "text": "We call our particular attention Scaled Dot-Product Attention. The input consists of queries and keys of dimension dk, and values of dimension dv.",
+      "start": 1428,
+      "end": 1574,
+      "sentence_index": 13
+    },
+    {
+      "evidence_id": "ev-15",
+      "chunk_id": "chunk-15",
+      "text": "Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions.",
+      "start": 1576,
+      "end": 1710,
+      "sentence_index": 14
+    },
+    {
+      "evidence_id": "ev-16",
+      "chunk_id": "chunk-16",
+      "text": "Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add positional encodings to the input embeddings at the bottoms of the encoder and decoder stacks.",
+      "start": 1712,
+      "end": 2053,
+      "sentence_index": 15
+    },
+    {
+      "evidence_id": "ev-17",
+      "chunk_id": "chunk-17",
+      "text": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million sentence pairs. Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT 2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece vocabulary.",
+      "start": 2055,
+      "end": 2443,
+      "sentence_index": 16
+    },
+    {
+      "evidence_id": "ev-18",
+      "chunk_id": "chunk-18",
+      "text": "We used the Adam optimizer with beta1 = 0.9, beta2 = 0.98 and epsilon = 10^-9.",
+      "start": 2445,
+      "end": 2523,
+      "sentence_index": 17
+    },
+    {
+      "evidence_id": "ev-19",
+      "chunk_id": "chunk-19",
+      "text": "During training, we employed label smoothing of value epsilon_ls = 0.1. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+      "start": 2525,
+      "end": 2696,
+      "sentence_index": 18
+    },
+    {
+      "evidence_id": "ev-20",
+      "chunk_id": "chunk-20",
+      "text": "On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big)) outperforms the best previously reported models by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4. Training took 3.5 days on 8 P100 GPUs.",
+      "start": 2698,
+      "end": 2961,
+      "sentence_index": 19
+    },
+    {
+      "evidence_id": "ev-21",
+      "chunk_id": "chunk-21",
+      "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than one quarter the training cost of the previous state-of-the-art model.",
+      "start": 2963,
+      "end": 3203,
+      "sentence_index": 20
+    },
+    {
+      "evidence_id": "ev-22",
+      "chunk_id": "chunk-22",
+      "text": "In this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.",
+      "start": 3205,
+      "end": 3432,
+      "sentence_index": 21
+    }
+  ],
+  "confidence": {
+    "thresholds": {
+      "low": 0.65,
+      "medium": 0.84
+    },
+    "entities": [
+      {
+        "target_id": "ef-01",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-02",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-03",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-04",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-05",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-06",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-07",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-08",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-09",
+        "kind": "entity",
+        "model_score": 0.86,
+        "evidence_score": 1.0,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.937,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-10",
+        "kind": "entity",
+        "model_score": 0.86,
+        "evidence_score": 1.0,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.937,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-11",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-12",
+        "kind": "entity",
+        "model_score": 0.89,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.913,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-13",
+        "kind": "entity",
+        "model_score": 0.89,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.913,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-14",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-15",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-16",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-17",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-18",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-19",
+        "kind": "entity",
+        "model_score": 0.89,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.913,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-20",
+        "kind": "entity",
+        "model_score": 0.89,
+        "evidence_score": 1.0,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.9505,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-21",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-22",
+        "kind": "entity",
+        "model_score": 0.89,
+        "evidence_score": 1.0,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.9505,
+        "band": "high"
+      },
+      {
+        "target_id": "ef-23",
+        "kind": "entity",
+        "model_score": 0.77,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.809,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-24",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-25",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-26",
+        "kind": "entity",
+        "model_score": 0.77,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.809,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-27",
+        "kind": "entity",
+        "model_score": 0.77,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.809,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-28",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-29",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-30",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-31",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-32",
+        "kind": "entity",
+        "model_score": 0.74,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7955,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-33",
+        "kind": "entity",
+        "model_score": 0.77,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.809,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-34",
+        "kind": "entity",
+        "model_score": 0.77,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.809,
+        "band": "medium"
+      },
+      {
+        "target_id": "ef-35",
+        "kind": "entity",
+        "model_score": 0.86,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.8995,
+        "band": "high"
+      }
+    ],
+    "relations": [
+      {
+        "target_id": "rf-01",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-02",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-03",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-04",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-05",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-06",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-07",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-08",
+        "kind": "relation",
+        "model_score": 0.82,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.8815,
+        "band": "high"
+      },
+      {
+        "target_id": "rf-09",
+        "kind": "relation",
+        "model_score": 0.82,
+        "evidence_score": 0.85,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.8815,
+        "band": "high"
+      },
+      {
+        "target_id": "rf-10",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-11",
+        "kind": "relation",
+        "model_score": 0.82,
+        "evidence_score": 1.0,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.919,
+        "band": "high"
+      },
+      {
+        "target_id": "rf-12",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-13",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-14",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-15",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-16",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-17",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-18",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-19",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-20",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-21",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-22",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-23",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-24",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-25",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-26",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      },
+      {
+        "target_id": "rf-27",
+        "kind": "relation",
+        "model_score": 0.7,
+        "evidence_score": 0.65,
+        "rule_score": 1.0,
+        "conflict_penalty": 0.0,
+        "final": 0.7775,
+        "band": "medium"
+      }
+    ],
+    "summary": {
+      "low": 0,
+      "medium": 51,
+      "high": 11
+    }
+  },
+  "issues": [],
+  "graph_updates": {
+    "matched_entities": [],
+    "new_entities": [
+      {
+        "entity_id": "ef-01",
+        "graph_entity_id": "g-entity-0010"
+      },
+      {
+        "entity_id": "ef-02",
+        "graph_entity_id": "g-entity-0011"
+      },
+      {
+        "entity_id": "ef-03",
+        "graph_entity_id": "g-entity-0012"
+      },
+      {
+        "entity_id": "ef-04",
+        "graph_entity_id": "g-entity-0013"
+      },
+      {
+        "entity_id": "ef-05",
+        "graph_entity_id": "g-entity-0014"
+      },
+      {
+        "entity_id": "ef-06",
+        "graph_entity_id": "g-entity-0015"
+      },
+      {
+        "entity_id": "ef-07",
+        "graph_entity_id": "g-entity-0016"
+      },
+      {
+        "entity_id": "ef-08",
+        "graph_entity_id": "g-entity-0017"
+      },
+      {
+        "entity_id": "ef-09",
+        "graph_entity_id": "g-entity-0018"
+      },
+      {
+        "entity_id": "ef-10",
+        "graph_entity_id": "g-entity-0019"
+      },
+      {
+        "entity_id": "ef-11",
+        "graph_entity_id": "g-entity-0020"
+      },
+      {
+        "entity_id": "ef-12",
+        "graph_entity_id": "g-entity-0021"
+      },
+      {
+        "entity_id": "ef-13",
+        "graph_entity_id": "g-entity-0022"
+      },
+      {
+        "entity_id": "ef-14",
+        "graph_entity_id": "g-entity-0023"
+      },
+      {
+        "entity_id": "ef-15",
+        "graph_entity_id": "g-entity-0024"
+      },
+      {
+        "entity_id": "ef-16",
+        "graph_entity_id": "g-entity-0025"
+      },
+      {
+        "entity_id": "ef-17",
+        "graph_entity_id": "g-entity-0026"
+      },
+      {
+        "entity_id": "ef-18",
+        "graph_entity_id": "g-entity-0027"
+      },
+      {
+        "entity_id": "ef-19",
+        "graph_entity_id": "g-entity-0028"
+      },
+      {
+        "entity_id": "ef-20",
+        "graph_entity_id": "g-entity-0029"
+      },
+      {
+        "entity_id": "ef-21",
+        "graph_entity_id": "g-entity-0030"
+      },
+      {
+        "entity_id": "ef-22",
+        "graph_entity_id": "g-entity-0031"
+      },
+      {
+        "entity_id": "ef-23",
+        "graph_entity_id": "g-entity-0032"
+      },
+      {
+        "entity_id": "ef-24",
+        "graph_entity_id": "g-entity-0033"
+      },
+      {
+        "entity_id": "ef-25",
+        "graph_entity_id": "g-entity-0034"
+      },
+      {
+        "entity_id": "ef-26",
+        "graph_entity_id": "g-entity-0035"
+      },
+      {
+        "entity_id": "ef-27",
+        "graph_entity_id": "g-entity-0036"
+      },
+      {
+        "entity_id": "ef-28",
+        "graph_entity_id": "g-entity-0037"
+      },
+      {
+        "entity_id": "ef-29",
+        "graph_entity_id": "g-entity-0038"
+      },
+      {
+        "entity_id": "ef-30",
+        "graph_entity_id": "g-entity-0039"
+      },
+      {
+        "entity_id": "ef-31",
+        "graph_entity_id": "g-entity-0040"
+      },
+      {
+        "entity_id": "ef-32",
+        "graph_entity_id": "g-entity-0041"
+      },
+      {
+        "entity_id": "ef-33",
+        "graph_entity_id": "g-entity-0042"
+      },
+      {
+        "entity_id": "ef-34",
+        "graph_entity_id": "g-entity-0043"
+      },
+      {
+        "entity_id": "ef-35",
+        "graph_entity_id": "g-entity-0044"
+      }
+    ],
+    "new_relations": [
+      {
+        "relation_id": "g-relation-0008",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0010",
+        "tail_graph_id": "g-entity-0018",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0009",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0011",
+        "tail_graph_id": "g-entity-0018",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0010",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0012",
+        "tail_graph_id": "g-entity-0019",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0011",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0013",
+        "tail_graph_id": "g-entity-0019",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0012",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0014",
+        "tail_graph_id": "g-entity-0019",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0013",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0015",
+        "tail_graph_id": "g-entity-0020",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0014",
+        "type": "related_to",
+        "head_graph_id": "g-entity-0016",
+        "tail_graph_id": "g-entity-0018",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0015",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0028",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0016",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0029",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0017",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0030",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0018",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0031",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0019",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0032",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0020",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0033",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0021",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0034",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0022",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0035",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0023",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0039",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0024",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0040",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0025",
+        "type": "uses",
+        "head_graph_id": "g-entity-0021",
+        "tail_graph_id": "g-entity-0041",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0026",
+        "type": "uses",
+        "head_graph_id": "g-entity-0023",
+        "tail_graph_id": "g-entity-0036",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0027",
+        "type": "uses",
+        "head_graph_id": "g-entity-0024",
+        "tail_graph_id": "g-entity-0036",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0028",
+        "type": "uses",
+        "head_graph_id": "g-entity-0025",
+        "tail_graph_id": "g-entity-0036",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0029",
+        "type": "measured_by",
+        "head_graph_id": "g-entity-0026",
+        "tail_graph_id": "g-entity-0042",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0030",
+        "type": "scheduled_at",
+        "head_graph_id": "g-entity-0026",
+        "tail_graph_id": "g-entity-0044",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0031",
+        "type": "measured_by",
+        "head_graph_id": "g-entity-0027",
+        "tail_graph_id": "g-entity-0043",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0032",
+        "type": "scheduled_at",
+        "head_graph_id": "g-entity-0027",
+        "tail_graph_id": "g-entity-0044",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0033",
+        "type": "measured_by",
+        "head_graph_id": "g-entity-0022",
+        "tail_graph_id": "g-entity-0042",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      },
+      {
+        "relation_id": "g-relation-0034",
+        "type": "measured_by",
+        "head_graph_id": "g-entity-0022",
+        "tail_graph_id": "g-entity-0043",
+        "source_runs": [
+          "run-20260417-204500-attention-paper-fine"
+        ],
+        "last_seen_at": "2026-04-17T12:44:26+00:00"
+      }
+    ],
+    "summary": {
+      "matched": 0,
+      "created": 35,
+      "relations_created": 27
+    }
+  },
+  "error_capture": {
+    "should_capture": false,
+    "reasons": [],
+    "case_id": null,
+    "suggestions": {
+      "few_shot_tags": [
+        "rel:measured_by",
+        "rel:related_to",
+        "rel:scheduled_at",
+        "rel:uses"
+      ],
+      "prompt_optimizations": []
+    }
+  },
+  "review_status": {
+    "status": "unreviewed",
+    "substantive_edits": 0,
+    "edit_ratio": 0,
+    "revised_run_path": null,
+    "last_reviewed_at": null
+  }
+}
